@@ -1,0 +1,41 @@
+﻿<Window x:Class="Q412037.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+        xmlns:local="clr-namespace:Q412037"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel>
+        <local:MyLookUpEdit
+            x:Name="NamelookUpEdit"
+            ItemsSource="{Binding NameData}"
+            DisplayMember="LongName"
+            ValueMember="ID"
+            AutoPopulateColumns="False"
+            AutoComplete="True"
+            IncrementalFiltering="True"
+            ImmediatePopup="True"
+            Width="290"
+            DataContext="{Binding}"
+            DisplayFormatString="{Binding}">
+            <local:MyLookUpEdit.ColumnsToFilter>
+                <local:ColumnItem FieldName="ID"/>
+                <local:ColumnItem FieldName="ShortName"/>
+                <local:ColumnItem FieldName="LongName"/>
+            </local:MyLookUpEdit.ColumnsToFilter>
+            <dxg:LookUpEdit.PopupContentTemplate>
+                <ControlTemplate>
+                    <dxg:GridControl Name="PART_GridControl">
+                        <dxg:GridControl.Columns>
+                            <dxg:GridColumn FieldName="ID" Header="ID" />
+                            <dxg:GridColumn FieldName="ShortName" Header="Name"></dxg:GridColumn>
+                            <dxg:GridColumn FieldName="LongName" Header="Long Name"></dxg:GridColumn>
+                        </dxg:GridControl.Columns>
+                        <dxg:GridControl.View>
+                            <dxg:TableView AutoWidth="True" ShowSearchPanelFindButton="True"/>
+                        </dxg:GridControl.View>
+                    </dxg:GridControl>
+                </ControlTemplate>
+            </dxg:LookUpEdit.PopupContentTemplate>
+        </local:MyLookUpEdit>
+    </StackPanel>
+</Window>
