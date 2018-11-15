@@ -1,3 +1,11 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [MainWindow.xaml](./CS/MainWindow.xaml) (VB: [MainWindow.xaml.vb](./VB/MainWindow.xaml.vb))
+* [MainWindow.xaml.cs](./CS/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](./VB/MainWindow.xaml.vb))
+* [MyLookUpEdit.cs](./CS/MyLookUpEdit/MyLookUpEdit.cs) (VB: [MyLookUpEdit.vb](./VB/MyLookUpEdit/MyLookUpEdit.vb))
+* [MyLookUpEditStrategy.cs](./CS/MyLookUpEdit/MyLookUpEditStrategy.cs) (VB: [MyLookUpEditStrategy.vb](./VB/MyLookUpEdit/MyLookUpEditStrategy.vb))
+<!-- default file list end -->
 # How to filter a LookUpEdit by multiple columns
 
 
