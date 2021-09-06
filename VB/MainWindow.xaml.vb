@@ -35,25 +35,37 @@ Imports System.Globalization
 Imports DevExpress.Xpf.Grid
 
 Namespace Q412037
-    ''' <summary>
-    ''' Interaction logic for MainWindow.xaml
-    ''' </summary>
-    Partial Public Class MainWindow
-        Inherits Window
+	''' <summary>
+	''' Interaction logic for MainWindow.xaml
+	''' </summary>
+	Partial Public Class MainWindow
+		Inherits Window
 
-        Public Sub New()
-            InitializeComponent()
-            Dim gc As GridColumn
-            NamelookUpEdit.ItemsSource = New List(Of Item) From { _
-                New Item With {.ID = 012, .ShortName = "q", .LongName = "aaay"}, _
-                New Item With {.ID = 123, .ShortName = "wn", .LongName = "bbbh"}, _
-                New Item With {.ID = 234, .ShortName = "e", .LongName = "cccn"} _
-            }
-        End Sub
-    End Class
-    Public Class Item
-        Public Property ID() As Integer
-        Public Property ShortName() As String
-        Public Property LongName() As String
-    End Class
+		Public Sub New()
+			InitializeComponent()
+			Dim gc As GridColumn
+			NamelookUpEdit.ItemsSource = New List(Of Item) From {
+				New Item With {
+					.ID = 012,
+					.ShortName = "q",
+					.LongName = "aaay"
+				},
+				New Item With {
+					.ID = 123,
+					.ShortName = "wn",
+					.LongName = "bbbh"
+				},
+				New Item With {
+					.ID = 234,
+					.ShortName = "e",
+					.LongName = "cccn"
+				}
+			}
+		End Sub
+	End Class
+	Public Class Item
+		Public Property ID() As Integer
+		Public Property ShortName() As String
+		Public Property LongName() As String
+	End Class
 End Namespace
