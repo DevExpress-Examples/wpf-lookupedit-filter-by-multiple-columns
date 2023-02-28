@@ -9,13 +9,13 @@ Namespace Q412037
 
         Public Sub New()
             Me.InitializeComponent()
-            Me.lookUpEdit.ItemsSource = New List(Of Item) From {New Item With {.ID = 012, .ShortName = "q", .LongName = "aaay"}, New Item With {.ID = 123, .ShortName = "wn", .LongName = "bbbh"}, New Item With {.ID = 234, .ShortName = "e", .LongName = "cccn"}}
+            Me.lookUpEdit.ItemsSource = New List(Of Item) From {New Item With {.ID = 012, .ShortName = "UP", .LongName = "United Package"}, New Item With {.ID = 123, .ShortName = "FS", .LongName = "Federal Shipping"}, New Item With {.ID = 234, .ShortName = "SE", .LongName = "Speedy Express"}}
         End Sub
 
         Private Sub lookUpEdit_SubstituteDisplayFilter(ByVal sender As Object, ByVal e As DevExpress.Xpf.Editors.Helpers.SubstituteDisplayFilterEventArgs)
             If String.IsNullOrEmpty(e.DisplayText) Then Return
-            Dim shortNameFilter = CriteriaOperator.Parse("StartsWith(ShortName,?)", e.DisplayText)
-            Dim idFilter = CriteriaOperator.Parse("StartsWith(ID,?)", e.DisplayText)
+            Dim shortNameFilter = CriteriaOperator.Parse("Contains(ShortName,?)", e.DisplayText)
+            Dim idFilter = CriteriaOperator.Parse("Contains(ID,?)", e.DisplayText)
             e.DisplayFilter = New GroupOperator(GroupOperatorType.Or, idFilter, shortNameFilter, e.DisplayFilter)
             e.Handled = True
         End Sub

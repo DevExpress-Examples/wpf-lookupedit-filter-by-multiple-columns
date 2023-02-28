@@ -6,11 +6,13 @@
         Title="MainWindow" Height="350" Width="525">
     <StackPanel>
         <dxg:LookUpEdit
-            x:Name="lookUpEdit" Width="290"
+            x:Name="lookUpEdit" Width="290" 
+            PopupMinHeight="150"
             DisplayMember="LongName"
             ValueMember="ID"
             AutoPopulateColumns="False"
             ImmediatePopup="True"
+            FilterCondition="Contains"
             SubstituteDisplayFilter="lookUpEdit_SubstituteDisplayFilter">
             <dxg:LookUpEdit.PopupContentTemplate>
                 <ControlTemplate>
@@ -19,7 +21,7 @@
                         <dxg:GridColumn FieldName="ShortName" Header="Name"/>
                         <dxg:GridColumn FieldName="LongName" Header="Long Name"/>
                         <dxg:GridControl.View>
-                            <dxg:TableView AutoWidth="True"/>
+                            <dxg:TableView AutoWidth="True" BestFitModeOnSourceChange="AllRows"/>
                         </dxg:GridControl.View>
                     </dxg:GridControl>
                 </ControlTemplate>
