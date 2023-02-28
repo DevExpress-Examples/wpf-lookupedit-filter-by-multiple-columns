@@ -86,8 +86,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MyLookUpEdit\MyLookUpEdit.vb" />
-    <Compile Include="MyLookUpEdit\MyLookUpEditStrategy.vb" />
     <Compile Include="Properties\AssemblyInfo.vb">
       <SubType>Code</SubType>
     </Compile>
