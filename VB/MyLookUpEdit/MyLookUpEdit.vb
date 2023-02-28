@@ -1,4 +1,4 @@
-﻿' Developer Express Code Central Example:
+' Developer Express Code Central Example:
 ' How to filter a LookUpEdit by multiple columns
 ' 
 ' To filter a LookUpEdit by multiple columns, create a LookUpEditStrategy
@@ -7,7 +7,6 @@
 ' 
 ' You can find sample updates and versions for different programming languages here:
 ' http://www.devexpress.com/example=E5210
-
 ' Developer Express Code Central Example:
 ' How to filter a LookUpEdit by multiple columns
 ' 
@@ -17,33 +16,34 @@
 ' 
 ' You can find sample updates and versions for different programming languages here:
 ' http://www.devexpress.com/example=E5210
-
-Imports System
 Imports System.Collections.Generic
-Imports System.Linq
-Imports System.Text
 Imports DevExpress.Xpf.Editors
 Imports DevExpress.Xpf.Grid.LookUp
 
 Namespace Q412037
+
     Public Class MyLookUpEdit
         Inherits LookUpEdit
 
+        Private columnsToFilterField As List(Of ColumnItem) = New List(Of ColumnItem)()
 
-        Private columnsToFilter_Renamed As New List(Of ColumnItem)()
-        Public Property ColumnsToFilter() As List(Of ColumnItem)
+        Public Property ColumnsToFilter As List(Of ColumnItem)
             Get
-                Return columnsToFilter_Renamed
+                Return columnsToFilterField
             End Get
+
             Set(ByVal value As List(Of ColumnItem))
-                columnsToFilter_Renamed = value
+                columnsToFilterField = value
             End Set
         End Property
+
         Protected Overrides Function CreateEditStrategy() As EditStrategyBase
             Return New MyLookUpEditStrategy(Me)
         End Function
     End Class
+
     Public Class ColumnItem
-        Public Property FieldName() As String
+
+        Public Property FieldName As String
     End Class
 End Namespace
