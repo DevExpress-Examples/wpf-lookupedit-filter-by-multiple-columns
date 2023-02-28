@@ -3,19 +3,29 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/E5210)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
+
+# WPF LookUpEdit - Filter by Multiple Columns
+
+This example allows users to filter the [LookUpEdit](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.LookUp.LookUpEdit)'s data by multiple columns.
+
+![image](https://user-images.githubusercontent.com/65009440/221863952-78bcfa6f-f926-433a-9833-c98050403a27.png)
+
+To filter by multiple columns when a user types directly in the edit box, handle the [LookUpEditBase.SubstituteDisplayFilter](https://docs.devexpress.com/WPF/DevExpress.Xpf.Editors.LookUpEditBase.SubstituteDisplayFilter) event. In the event handler, create criteria operators for the required columns, use the `GroupOperator` to combine the created operators, and assign this operator to the `DisplayFilter` property.
+
+The alternative way to search by multiple columns in the `LookUpEdit` is to use the [SearchLookUpEditStyleSettings](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.LookUp.SearchLookUpEditStyleSettings) class, as demonstrated in the following article: [Create a SearchLookUpEdit and Bind it to Data](https://docs.devexpress.com/wpf/10748/controls-and-libraries/data-editors/getting-started/how-to-create-a-searchlookupedit-and-bind-it-to-data).
+
+## Files to Review
 
 * [MainWindow.xaml](./CS/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/MainWindow.xaml))
 * [MainWindow.xaml.cs](./CS/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](./VB/MainWindow.xaml.vb))
-* [MyLookUpEdit.cs](./CS/MyLookUpEdit/MyLookUpEdit.cs) (VB: [MyLookUpEdit.vb](./VB/MyLookUpEdit/MyLookUpEdit.vb))
-* [MyLookUpEditStrategy.cs](./CS/MyLookUpEdit/MyLookUpEditStrategy.cs) (VB: [MyLookUpEditStrategy.vb](./VB/MyLookUpEdit/MyLookUpEditStrategy.vb))
-<!-- default file list end -->
-# How to filter a LookUpEdit by multiple columns
 
+## Documentation
 
-<p>The easiest way to search by multiple columns in LookUpEdit is to use the <strong>SearchLookUpEditStyleSettings</strong> class as demonstrated in the <a href="https://documentation.devexpress.com/#wpf/customdocument10748">How to: Create a SearchLookUpEdit and Bind it to Data</a> article.<br /><br />If you would like to filter by multiple columns when a user types directly in the edit box instead, create a LookUpEditStrategy descendant and override the UpdateDisplayFilter method where the filter criteria is set.</p>
+* [SearchLookUpEditStyleSettings](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.LookUp.SearchLookUpEditStyleSettings)
+* [LookUpEditBase.SubstituteDisplayFilter](https://docs.devexpress.com/WPF/DevExpress.Xpf.Editors.LookUpEditBase.SubstituteDisplayFilter)
 
-<br/>
+## More Examples
 
-
+* [WPF LookUpEdit - Customize the Embedded Data Grid](https://github.com/DevExpress-Examples/wpf-lookupedit-customize-the-embedded-data-grid)
+* [WPF LookUpEdit - Display a TreeList as Popup Content](https://github.com/DevExpress-Examples/wpf-lookupedit-display-treelist-as-popup-content)
+* [WPF Data Grid - Filter a Column's LookUpEdit Based on the Value in Another Column](https://github.com/DevExpress-Examples/wpf-data-grid-filter-column-lookupedit-based-on-value-in-another-column)
