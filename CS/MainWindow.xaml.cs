@@ -7,16 +7,16 @@ namespace Q412037 {
         public MainWindow() {
             InitializeComponent();
             lookUpEdit.ItemsSource = new List<Item> {
-                new Item { ID = 012, ShortName = "q", LongName = "aaay"},
-                new Item { ID = 123, ShortName = "wn", LongName = "bbbh"},
-                new Item { ID = 234, ShortName = "e", LongName = "cccn"},
+                new Item { ID = 012, ShortName = "UP", LongName = "United Package"},
+                new Item { ID = 123, ShortName = "FS", LongName = "Federal Shipping"},
+                new Item { ID = 234, ShortName = "SE", LongName = "Speedy Express"},
             };
         }
         void lookUpEdit_SubstituteDisplayFilter(object sender, DevExpress.Xpf.Editors.Helpers.SubstituteDisplayFilterEventArgs e) {
             if (string.IsNullOrEmpty(e.DisplayText))
                 return;
-            var shortNameFilter = CriteriaOperator.Parse("StartsWith(ShortName,?)", e.DisplayText);
-            var idFilter = CriteriaOperator.Parse("StartsWith(ID,?)", e.DisplayText);
+            var shortNameFilter = CriteriaOperator.Parse("Contains(ShortName,?)", e.DisplayText);
+            var idFilter = CriteriaOperator.Parse("Contains(ID,?)", e.DisplayText);
             e.DisplayFilter = new GroupOperator(GroupOperatorType.Or, idFilter, shortNameFilter, e.DisplayFilter);
             e.Handled = true;
         }
