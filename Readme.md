@@ -31,7 +31,7 @@ The alternative way to search by multiple columns in the `LookUpEdit` is to use 
 * [WPF LookUpEdit - Display a TreeList as Popup Content](https://github.com/DevExpress-Examples/wpf-lookupedit-display-treelist-as-popup-content)
 * [WPF Data Grid - Filter a Column's LookUpEdit Based on the Value in Another Column](https://github.com/DevExpress-Examples/wpf-data-grid-filter-column-lookupedit-based-on-value-in-another-column)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-lookupedit-filter-by-multiple-columns&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-lookupedit-filter-by-multiple-columns&~~~was_helpful=no)
 
